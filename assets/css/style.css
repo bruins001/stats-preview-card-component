@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+/* Global */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    --color-background: hsl(233, 47%, 7%);
+    --color-card: hsl(244, 38%, 16%);
+    --color-light-text: #1B1937;
+    --color-purple: hsl(277, 64%, 61%);
+    --color-paragraph: hsla(0, 0%, 100%, 0.75);
+    --color-headings: hsla(0, 0%, 100%, 0.6);
+    --mobile-card-width: 90%;
+
+    background-color: var(--color-background);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: var(--color-card);
+    max-width: var(--mobile-card-width);
+    padding: calc(var(--mobile-card-width) / 10);
+}
+
+ul {
+    text-transform: uppercase;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+}
+
+li {
+    margin-top: 1rem;
+}
+
+p {
+    font-size: 0.9375rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Combinations */
+
+h1 > span {
+    color: var(--color-purple);
+}
+
+h1,
+p,
+li {
+    text-align: center;
+}
+
+h1,
+li > p {
+    margin-top: 0;
+}
+
+h1,
+li > span {
+    color: white;
+    font-weight: bold;
+}
+
+p,
+li {
+    color: var(--color-paragraph);
+    font-weight: normal;
+}
+
+li > p {
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1.5625rem;
+    letter-spacing: 0.0625rem;
+
+    margin-bottom: 0;
+}
+
+/* Classes */
+
+.banner-photo {
+    min-height: 15rem;
+    max-width: 100%;
+    background-image:
+            linear-gradient(var(--color-purple), var(--color-purple)),
+            url("../images/image-header-mobile.jpg");
+    background-size: cover;
+    background-blend-mode: color;
+}
