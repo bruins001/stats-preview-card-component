@@ -19,6 +19,7 @@ body {
     --color-paragraph: hsla(0, 0%, 100%, 0.75);
     --color-headings: hsla(0, 0%, 100%, 0.6);
     --mobile-card-width: 90%;
+    --desktop-card-width: 70rem;
 
     background-color: var(--color-background);
     font-family: 'Inter', sans-serif;
@@ -33,9 +34,11 @@ body {
 main {
     background-color: var(--color-card);
     max-width: var(--mobile-card-width);
-    padding: calc(var(--mobile-card-width) / 10);
+    /*padding: calc(var(--mobile-card-width) / 10);*/
 
     border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 ul {
@@ -103,6 +106,14 @@ li > p {
 /* Classes */
 
 .banner-photo {
+
+}
+
+/* Id's */
+
+#photo-section {
+    grid-row: 1;
+
     min-height: 15rem;
     max-width: 100%;
     background-image:
@@ -110,4 +121,44 @@ li > p {
             url("../images/image-header-mobile.jpg");
     background-size: cover;
     background-blend-mode: color;
+}
+
+#text-section {
+    padding: 1.5rem;
+}
+
+/* Media queries */
+
+/* Desktop size */
+@media screen and (min-width: 550px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1,
+    p {
+        text-align: start;
+    }
+
+    #photo-section {
+        grid-column: 2;
+    }
+
+    #text-section {
+        padding: 3rem;
+    }
+
+    li,
+    li > p {
+        display: inline;
+    }
+
+    li > span {
+        display: block;
+    }
+
+    ul {
+        display: flex;
+        gap: 4rem;
+    }
 }
