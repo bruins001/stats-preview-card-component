@@ -20,6 +20,9 @@ body {
     --color-headings: hsla(0, 0%, 100%, 0.6);
     --mobile-card-width: 90%;
     --desktop-card-width: 70rem;
+    --fontsize-paragraph: 0.9375rem;
+    --fontsize-heading: 2.25rem;
+    --fontsize-li-span: 1.5rem;
 
     background-color: var(--color-background);
     font-family: 'Inter', sans-serif;
@@ -56,7 +59,11 @@ li {
 }
 
 p {
-    font-size: 0.9375rem;
+    font-size: var(--fontsize-paragraph);
+}
+
+h1 {
+    font-size: var(--fontsize-heading);
 }
 
 img {
@@ -83,6 +90,7 @@ li > p {
 h1,
 li > span {
     color: white;
+    font-size: var(--fontsize-li-span);
     font-weight: bold;
 }
 
@@ -95,7 +103,6 @@ li {
 li > p {
     text-align: center;
     font-family: "Lexend Deca", sans-serif;
-    font-size: 0.75rem;
     font-weight: normal;
     line-height: 1.5625rem;
     letter-spacing: 0.0625rem;
@@ -135,17 +142,14 @@ li > p {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    ul {
+        display: flex;
+        gap: 4rem;
+    }
+
     h1,
     p {
         text-align: start;
-    }
-
-    #photo-section {
-        grid-column: 2;
-    }
-
-    #text-section {
-        padding: 3rem;
     }
 
     li,
@@ -157,8 +161,11 @@ li > p {
         display: block;
     }
 
-    ul {
-        display: flex;
-        gap: 4rem;
+    #photo-section {
+        grid-column: 2;
+    }
+
+    #text-section {
+        padding: 14rem;
     }
 }
