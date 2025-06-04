@@ -34,6 +34,8 @@ main {
     background-color: var(--color-card);
     max-width: var(--mobile-card-width);
     padding: calc(var(--mobile-card-width) / 10);
+
+    border-radius: 0.5rem;
 }
 
 ul {
